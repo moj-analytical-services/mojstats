@@ -15,7 +15,8 @@ Imports:
   dplyr,
   tidyr,
   rlang,
-  openxlsx
+  openxlsx,
+  a11ytables
 Depends:
   magrittr
 Remotes:
