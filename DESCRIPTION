@@ -20,3 +20,4 @@ Depends:
   magrittr
 Remotes:
   moj-analytical-services/Rdbtools
+  co-analysis/a11ytables
