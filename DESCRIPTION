@@ -19,5 +19,5 @@ Imports:
 Depends:
   magrittr
 Remotes:
-  moj-analytical-services/Rdbtools
+  moj-analytical-services/Rdbtools,
   co-analysis/a11ytables
