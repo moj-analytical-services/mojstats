@@ -16,9 +16,11 @@ Imports:
   tidyr,
   rlang,
   openxlsx,
-  a11ytables
+  a11ytables,
+  Rs3tools
 Depends:
   magrittr
 Remotes:
   moj-analytical-services/Rdbtools,
+  moj-analytical-services/Rs3tools,
   co-analysis/a11ytables
