@@ -5,7 +5,8 @@ build_stats_tables <- function(data,
                           cover_df,
                           notes_df,
                           tables_df,
-                          outfile) {
+                          outfile_s3bucket,
+                          outfile_filename) {
 
   data_tables <- to_table_list(data,dimensions,indicator)
 
@@ -115,6 +116,12 @@ build_stats_tables <- function(data,
 
   lapply(sheet_array,function(x) {openxlsx::setRowHeights(wb,x,c(4:5),34)})
 
-  openxlsx::saveWorkbook(wb, outfile, overwrite = TRUE)
+ # openxlsx::saveWorkbook(wb, outfile, overwrite = TRUE)
+
+  # save file to AWS S3 bucket
+ # s3_bucket <- "alpha-forward-look"
+  #filename  <- "Forward Look.xlsx"
+
+  Rs3tools::write_using(wb, openxlsx::saveWorkbook, paste0(outfile_s3bucket, "/", outfile_filename), overwrite=TRUE)
 
 }
