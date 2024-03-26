@@ -10,7 +10,7 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports:
-  stringr (>= 1.5.1),
+  stringr,
   Rdbtools,
   dplyr,
   tidyr,
